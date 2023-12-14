@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <style>
+        body {
+            background: #F8F8FF;
+        }
+
+        .logo-slider {
+            overflow: hidden;
+            padding: 30px 0 0 0;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .logo-slider:hover .logos-slide {
+            animation-play-state: paused;
+        }
+
+        .logos-slide {
+            display: inline-block;
+            animation: 45s slide infinite linear;
+        }
+
+        .logos-slide img {
+            width: 183px;
+            height: 83px;
+        }
+
+
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style> -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .autoplay-progress {
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+            z-index: 10;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--swiper-theme-color);
+        }
+
+        .autoplay-progress svg {
+            --progress: 0;
+            position: absolute;
+            left: 0;
+            top: 0px;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            stroke-width: 4px;
+            stroke: var(--swiper-theme-color);
+            fill: none;
+            stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+            stroke-dasharray: 125.6;
+            transform: rotate(-90deg);
+        }
+    </style>
+</head>
+
+<body class="bg-sky-100">
+    <header class="">
+        <div class="max-w-[1920px] mx-auto p-2">
+            <div class="flex justify-between items-center pt-2">
+                <div class="flex items-center gap-6">
+                    <img loading="lazy" src="https://ugel16barranca.gob.pe/wp-content/uploads/2019/02/Banner.png" alt="" width="420">
+                </div>
+                <ul class="flex gap-4 capitalize text-sm">
+                    <li class="hover:text-sky-600">
+                        <i class="fas fa-house-chimney"></i>
+                        <a href="">inicio</a>
+                    </li>
+                    <li class="hover:text-sky-600">
+                        <i class="fas fa-search"></i>
+                        <a href="blog.html">transparencia</a>
+                    </li>
+                    <li class="hover:text-sky-600">
+                        <i class="fas fa-envelope"></i>
+                        <a href="">web mail</a>
+                    </li>
+                    <li class="hover:text-sky-600">
+                        <i class="fa-brands fa-microsoft"></i>
+                        <a href="">portalofio</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex justify-between items-center py-2 hidden">
+                <div class="flex items-center gap-6">
+
+                </div>
+                <div class="flex items-center text-2xl">
+                    <input style="outline: none;  font-size: 17px;" class="rounded-l px-2" type="text">
+                    <div class="bg-red-600 rounded-r">
+                        <i class="fas fa-search text-white m-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="max-w-[1920px] mx-auto">
+        <!-- Slider main container -->
+        <div class="swiper myswiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <img loading="lazy" class="swiper-slide w-full h-auto lg:h-[550px] object-cover object-center"
+                    src="https://roma-deve.github.io/public/img/broly.webp" alt="">
+                <img loading="lazy" src="https://www.japanfm.fr/wp-content/uploads/2023/06/dragon-ball-goku-sourire-scaled.jpg"
+                    alt="" class="swiper-slide w-full h-auto lg:h-[550px] object-cover object-center">
+
+                <img loading="lazy" src="https://www.mundodeportivo.com/alfabeta/hero/2023/03/image-2023-03-23t222927.291.jpg?width=768&aspect_ratio=16:9&format=nowebp"
+                    alt="" class="swiper-slide w-full h-auto lg:h-[550px] object-cover object-center">
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="autoplay-progress">
+                <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+            </div>
+        </div>
+    </section>
+    <section class="max-w-[1920px] mx-auto p-5">
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-x-16 gap-y-8 items-center">
+            <a href="" class="uppercase  flex flex-col items-center">
+                <div class="pb-2 text-normal font-sans font-extrabold text-gray-500">
+                    <p>Consulta tu</p>
+                    <p>expediente</p>
+                </div>
+                <img loading="lazy" class="w-auto h-16 transition-all  duration-200 hover:scale-110"
+                    src="https://cdn-icons-png.flaticon.com/128/2145/2145855.png" alt="">
+            </a>
+            <a href="" class="uppercase flex flex-col items-center ">
+                <div class="pb-2 text-normal font-sans font-extrabold text-gray-500">
+                    <p>Requisitos para</p>
+                    <p>tramites</p>
+                </div>
+                <img loading="lazy" class="w-auto h-16 transition-all  duration-200 hover:scale-110"
+                    src="https://cdn-icons-png.flaticon.com/128/10279/10279604.png" alt="">
+            </a>
+            <a href="" class="uppercase flex flex-col items-center ">
+                <div class="pb-2 text-normal font-sans font-extrabold text-gray-500">
+                    <p>patrimonio</p>
+                </div>
+                <img loading="lazy" class="w-auto h-16 transition-all  duration-200 hover:scale-110"
+                    src="https://cdn-icons-png.flaticon.com/128/444/444708.png" alt="">
+            </a>
+            <a href="" class="uppercase flex flex-col items-center ">
+                <div class="pb-2 text-normal font-sans font-extrabold text-gray-500">
+                    <p>documentos</p>
+                    <p>oficiales</p>
+                </div>
+                <img loading="lazy" class="w-auto h-16 transition-all  duration-200 hover:scale-110"
+                    src="https://cdn-icons-png.flaticon.com/128/1183/1183931.png" alt="">
+            </a>
+            <a href="" class="uppercase flex flex-col items-center ">
+                <div class="pb-2 text-normal font-sans font-extrabold text-gray-500">
+                    <p>bolsa de</p>
+                    <p>trabajo</p>
+                </div>
+                <img loading="lazy" class="w-auto h-16 transition-all  duration-200 hover:scale-110"
+                    src="https://cdn-icons-png.flaticon.com/128/9398/9398777.png" alt="">
+            </a>
+            <a href="" class="uppercase flex flex-col items-center ">
+                <div class="pb-2 text-normal font-sans font-extrabold text-gray-500">
+                    <p>consulta de</p>
+                    <p>resoluciones</p>
+                </div>
+                <img loading="lazy" class="w-auto h-16 transition-all  duration-200 hover:scale-110"
+                    src="https://cdn-icons-png.flaticon.com/128/7811/7811662.png" alt="">
+            </a>
+
+            <a href="" class="uppercase flex flex-col items-center ">
+                <div class="pb-2 text-normal font-sans font-extrabold text-gray-500">
+                    <p>atención al</p>
+                    <p>ciudadano</p>
+                </div>
+                <img loading="lazy" class="w-auto h-16 transition-all  duration-200 hover:scale-110"
+                    src="https://cdn-icons-png.flaticon.com/128/4223/4223049.png" alt="">
+            </a>
+            <a href="" class="uppercase flex flex-col items-center ">
+                <div class="pb-2 text-normal font-sans font-extrabold text-gray-500">
+                    <p>mesa de partes</p>
+                    <p>virtual</p>
+                </div>
+                <img loading="lazy" class="w-auto h-16 transition-all  duration-200 hover:scale-110"
+                    src="https://cdn-icons-png.flaticon.com/128/10551/10551415.png" alt="">
+            </a>
+            <a href="" class="uppercase flex flex-col items-center ">
+                <div class="pb-2 text-normal font-sans font-extrabold text-gray-500">
+                    <p>AYNI</p>
+                </div>
+                <img loading="lazy" class="w-auto h-16 transition-all  duration-200 hover:scale-110"
+                    src="https://cdn-icons-png.flaticon.com/128/2691/2691813.png" alt="">
+            </a>
+            <a href="" class="uppercase flex flex-col items-center ">
+                <div class="pb-2 text-normal font-sans font-extrabold text-gray-500">
+                    <p>compromiso</p>
+                    <p>desempeño 2022</p>
+                </div>
+                <img loading="lazy" class="w-auto h-16 transition-all  duration-200 hover:scale-110"
+                    src="https://cdn-icons-png.flaticon.com/128/4254/4254897.png" alt="">
+            </a>
+            <a href="" class="uppercase flex flex-col items-center ">
+                <div class="pb-2 text-normal font-sans font-extrabold text-gray-500">
+                    <p>directorio</p>
+                    <p>institucional</p>
+                </div>
+                <img loading="lazy" class="w-auto h-16 transition-all  duration-200 hover:scale-110"
+                    src="https://cdn-icons-png.flaticon.com/128/7626/7626235.png" alt="">
+            </a>
+            <a href="" class="uppercase flex flex-col items-center ">
+                <div class="pb-2 text-normal font-sans font-extrabold text-gray-500">
+                    <p>transparencia</p>
+                    <p>ugel</p>
+                </div>
+                <img loading="lazy" class="w-auto h-16 transition-all  duration-200 hover:scale-110"
+                    src="https://cdn-icons-png.flaticon.com/128/347/347692.png" alt="">
+            </a>
+
+        </div>
+    </section>
+
+    <section class="max-w-[1920px] mx-auto px-5 text-center pt-7">
+        <h2 class="font-sans font-black text-3xl text-red-700 pb-10">SERVICIOS EDUCATIVOS</h2>
+        <div class="grid lg:grid-cols-4 gap-3  items-center">
+            <div class="flex flex-col justify-between gap-2 hover:bg-indigo-200 group transition-all duration-400 rounded-md  p-2 h-full">
+                <p class="text-indigo-500 font-bold uppercase">conoce tu cole</p>
+                <i class="fas fa-school-flag text-indigo-600 text-5xl"></i>
+                <a href="conoce_tu_cole.html"
+                    class="rounded p-2 text-gray-600 hover:text-gray-200 group-hover:bg-indigo-400">
+                    ver más
+                </a>
+            </div>
+            <div class="flex flex-col justify-between gap-2 hover:bg-indigo-200 group transition-all duration-400 rounded-md  p-2 h-full">
+                <p class="text-indigo-500 font-bold uppercase">calendario cívico</p>
+                <i class="fas fa-calendar-days text-indigo-600 text-5xl"></i>
+                <a href=""
+                    class="rounded p-2 text-gray-600 hover:text-gray-200 group-hover:bg-indigo-400">
+                    ver más
+                </a>
+            </div>
+            <div class="flex flex-col justify-between gap-2 hover:bg-indigo-200 group transition-all duration-400 rounded-md  p-2 h-full">
+                <p class="text-indigo-500 font-bold uppercase">recursos educativos</p>
+                <i class="fas fa-credit-card text-indigo-600 text-5xl"></i>
+                <a href=""
+                    class="rounded p-2 text-gray-600 hover:text-gray-200 group-hover:bg-indigo-400 transition-all duration-200">
+                    ver más
+                </a>
+            </div>
+            <div class="flex flex-col justify-between gap-2 hover:bg-indigo-200 group transition-all duration-400 rounded-md  p-2 h-full">
+                <p class="text-indigo-500 font-bold uppercase">preguntas frecuentes</p>
+                <i class="fas fa-circle-question text-indigo-600 text-5xl"></i>
+                <a href=""
+                    class="rounded p-2 text-gray-600 hover:text-gray-200 group-hover:bg-indigo-400 transition-all duration-200">
+                    ver más
+                </a>
+            </div>
+
+            <a href="#"
+                class="flex flex-col justify-center bg-violet-700 rounded-md text-white hover:bg-violet-800 h-full px-2 py-6">
+                <i class="fas fa-circle-info text-6xl"></i>
+                <p class="font-bold text-2xl">Guia de Servicios</p>
+            </a>
+            <a href="#"
+                class="flex flex-col justify-center bg-red-700 rounded-md text-white hover:bg-red-800 h-full px-2 py-6">
+                <i class="fas fa-circle-info text-6xl"></i>
+                <p class="font-bold text-2xl">Portalofio</p>
+            </a>
+            <a href="#"
+                class="flex flex-col justify-center bg-sky-700 rounded-md text-white hover:bg-sky-800 h-full px-2 py-6">
+                <i class="fas fa-cubes text-6xl"></i>
+                <p class="font-bold text-2xl">FUT</p>
+            </a>
+            <a href="#"
+                class="flex flex-col justify-center bg-yellow-700 rounded-md text-white hover:bg-yellow-800 h-full px-2 py-6">
+                <i class="fas fa-users text-6xl"></i>
+                <p class="font-bold capitalize text-2xl">AGP</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="container mx-auto pt-7 text-center">
+        <h2 class="font-sans font-black text-3xl text-red-700 pb-10">NOTICIAS</h2>
+        <div class="swiper mySwiper2">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide h-auto">
+                    <article class="bg-white overflow-hidden rounded-lg flex flex-col justify-between h-full">
+                      <a href="#">
+                        <figure class="">
+                            <img loading="lazy" class="object-cover object-center hover:scale-105 transition-all duration-500"
+                                src="https://roma-deve.github.io/public/img/broly.webp" alt="">
+                        </figure>
+                      </a>
+                        <div class="p-2 flex-1 space-y-3">
+                            <div class="flex justify-between items-center">
+                                <button class="text-xs text-white bg-black p-2">
+                                    <a href="noticias.html">Noticias</a>
+                                </button>
+                                <p class="text-gray-500 text-sm">Diciembre 12, 2023</p>
+                            </div>
+                            <h4 class="text-lg leading-5 line-clamp-3 uppercase text-left">
+                                <a href="#d">
+                                    OFICIO MULTIPLE N°049-2021-GRL-GRDS-DRTPE-DPPDFSST
+                                </a>
+                            </h4>
+                        </div>
+                        <a href="#d" class="text-center text-red-600 font-semibold pb-2">
+                            Leer más
+                        </a>
+                    </article>
+                </div>
+
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="pb-10">
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+    </section>
+    <section class="container mx-auto pt-7 text-center">
+        <h2 class="font-sans font-black text-3xl text-red-700 pb-10">COMUNICADOS</h2>
+        <div class="swiper mySwiper3">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide h-auto">
+                    <article class="bg-white overflow-hidden rounded-lg flex flex-col justify-between h-full">
+                        <a href="#">
+                            <figure class="">
+                                <img loading="lazy" class="object-cover object-center hover:scale-105 transition-all duration-500"
+                                    src="https://roma-deve.github.io/public/img/broly.webp" alt="">
+                            </figure>
+                          </a>
+                        <div class="p-2 flex-1 space-y-3">
+                            <div class="flex justify-between items-center">
+                                <button class="text-xs text-white bg-black p-2">
+                                    <a href="#">Comunicados</a>
+                                </button>
+                                <p class="text-gray-500 text-sm">Diciembre 12, 2023</p>
+                            </div>
+                            <h4 class="text-lg leading-5 line-clamp-3 uppercase text-left">
+                                <a href="#d">
+                                    OFICIO MULTIPLE N°049-2021-GRL-GRDS-DRTPE-DPPDFSST
+                                </a>
+                            </h4>
+                        </div>
+                        <a href="#d" class="text-center text-red-600 font-semibold pb-2">
+                            Leer más
+                        </a>
+                    </article>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="pb-10">
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="bg-white text-black dark:bg-gray-900 dark:text-gray-300 transition-all duration-500">
+        <div class="max-w-[1920px] mx-auto p-5">
+            <div class="flex flex-col lg:flex-row lg:justify-between">
+                <div class=" pb-2">
+                    <p class="uppercase text-lg font-semibold pb-4">UNIDAD DE GESTIÓN EDUCATIVA LOCAL N°16</p>
+                    <p>RUC: 20320689792</p>
+                    <p>Director: Mg. Demetrio M. Muñoz Soto</p>
+                    <p>Dirección: Av. Ferrocarril Nº 488 frente al</p>
+                    <p>Mercado Nuevo Amanecer, Barranca, Lima 31, Perú.</p>
+                    <p>Horario de atención:</p>
+                    <p>Lunes a Viernes (8:00 am – 12:30 pm) – (2:00 pm – 4:30 pm)</p>
+                    <p>Consultas: (01) 235 3464</p>
+                    <p>Correo: informaciones@ugel16barranca.gob.pe</p>
+                    <p>&copy; Todos los Derechos Reservados</p>
+                </div>
+
+                <div class="max-md:grid gap-5 max-md:grid-cols-2 flex pb-2">
+                    <div class="space-y-3 text">
+                        <h3 class="uppercase text-lg font-semibold">Redes sociales</h3>
+                        <ul class="flex gap-3">
+                            <li>
+                                <a href="#">
+                                    <i
+                                        class="fab fa-facebook text-2xl transition-colors  duration-200 rounded-lg hover:text-blue-900 hover:bg-blue-200 px-1.5"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i
+                                        class="fab fa-instagram text-2xl transition-colors  duration-200 rounded-lg hover:text-indigo-900 hover:bg-indigo-200 px-1.5"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i
+                                        class="fa-brands fa-linkedin text-2xl transition-colors duration-200  rounded-lg hover:text-sky-900 hover:bg-sky-200 px-1.5"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+
+                <div class="text-center  text-lg font-semibold"> <i class="fa-solid fa-mug-hot"></i> Roma Deveps</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+
+        var swiper = new Swiper('.myswiper', {
+            loop: true,
+            centeredSlides: true,
+            spaceBetween: 20,
+            grabCursor: true,
+            autoplay: {
+                delay: 4500,
+                disableOnInteraction: false
+            },
+            on: {
+                autoplayTimeLeft(s, time, progress) {
+                    progressCircle.style.setProperty("--progress", 1 - progress);
+                    progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+                }
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        var swiper2 = new Swiper(".mySwiper2", {
+            spaceBetween: 30,
+            slidesPerView: 5,
+            loop: true,
+            grabCursor: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false
+            },
+            on: {
+                autoplayTimeLeft(s, time, progress) {
+                    progressCircle.style.setProperty("--progress", 1 - progress);
+                    progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+                }
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+        var swiper3 = new Swiper(".mySwiper3", {
+            spaceBetween: 30,
+            slidesPerView: 5,
+            loop: true,
+            grabCursor: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false
+            },
+            on: {
+                autoplayTimeLeft(s, time, progress) {
+                    progressCircle.style.setProperty("--progress", 1 - progress);
+                    progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+                }
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+    </script>
+</body>
+
+</html>
